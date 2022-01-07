@@ -25,6 +25,8 @@ Route::prefix('v1')->group(function () {
 
     Route::middleware('auth:sanctum')->group(function () {
         Route::get('user', [UserController::class, 'fetch']);
+        Route::post('user', [UserController::class, 'updateProfile']);
+        Route::get('logout', [UserController::class, 'logout']);
     });
 });
 

@@ -77,4 +77,9 @@ class UserController extends Controller
             ], 'authentication failed', 500);
         }
     }
+
+    public function fetch(Request $request)
+    {
+        return ResponseFormatter::success($request->user(), 'success get user');
+    }
 }

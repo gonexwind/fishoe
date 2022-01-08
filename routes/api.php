@@ -29,6 +29,7 @@ Route::prefix('v1')->group(function () {
         Route::get('logout', [UserController::class, 'logout']);
 
         Route::get('transactions', [TransactionController::class, 'all']);
+        Route::get('checkout', [TransactionController::class, 'checkout']);
     });
 });
 
